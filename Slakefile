@@ -5,15 +5,17 @@ option 'name' 'Name to give to the project' 'NAME'
 option 'currentfile' 'Latest file that triggered the save' 'FILE'
 
 externalScripts =
-  # \https://samizdat.cz/tools/tooltip/v1.1.4.d3.js
+  \https://samizdat.cz/tools/tooltip/v1.1.4.d3.js
   ...
 
 externalStyles =
-  # \https://samizdat.cz/tools/tooltip/v1.1.4.css
+  \https://samizdat.cz/tools/tooltip/v1.1.4.css
   ...
 
-externalData = {}
-  # "style": "#__dirname/www/screen.css"
+externalData =
+  "style"       : "#__dirname/www/screen.css"
+  "koalice"     : "#__dirname/data/koalice.csv"
+  "strany_kody" : "#__dirname/data/strany_kody.csv"
 
 preferScripts = <[ postInit.js _loadData.js ../data.js init.js _loadExternal.js]>
 deferScripts = <[ kandidatka.js base.js ]>
