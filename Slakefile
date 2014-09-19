@@ -74,7 +74,9 @@ download-external-data = (cb) ->
   out = {}
   (err) <~ async.each files, ({key, datafile}:file, cb) ->
     (err, data) <~ fs.readFile datafile
-    return cb that if err
+    if err
+      console.error "Error loading external data", err
+      return cb that
     data .= toString!
     if \json is datafile.substr -4, 4
       data = JSON.parse data
