@@ -215,11 +215,11 @@ task \build ->
 task \deploy ->
   <~ async.parallel do
     * download-external-scripts
-      download-external-data
       download-external-styles
       # build-all-server-scripts!
       # refresh-manifest!
   <~ build-styles compression: yes
+  <~ download-external-data
   <~ build-all-scripts
   <~ combine-scripts compression: yes
   <~ inject-index!
