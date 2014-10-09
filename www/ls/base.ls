@@ -5,19 +5,22 @@ init = ->
   chord = d3.layout.chord!
     ..matrix data
     ..padding 0.05
-
   width = 610
   height = 610
   innerRadius = 550 * 0.48
   outerRadius = 550 * 0.5
   colors =
-    \#8E8E8E
-    \#FEE300
     \#0FB103
+    \#FEE300
+    \#8E8E8E
     \#5434A3
-    \#66E2D8
     \#1C76F0
+    \#e3001a
+    \#f29400
+    \#66E2D8
     \#B1C484
+    \#000000
+    \#FB9A99
   arcFill = (d, i) ->
     colors[i]
 

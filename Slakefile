@@ -14,8 +14,7 @@ externalStyles =
 
 externalData =
   "style"       : "#__dirname/www/screen.css"
-  "koalice"     : "#__dirname/data/koalice.csv"
-  "strany_kody" : "#__dirname/data/strany_kody.csv"
+  # "koalice"     : "#__dirname/data/koalice.csv"
 
 preferScripts = <[ postInit.js _loadData.js ../data.js init.js _loadExternal.js]>
 deferScripts = <[ kandidatka.js base.js ]>
